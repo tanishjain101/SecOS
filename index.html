@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Security Hardening | Comprehensive Guide</title>
+    <meta name="description" content="A comprehensive guide to hardening and securing your operating system against potential threats.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="ph ph-shield-check"></i>
+            <span>SecOS Runbook</span>
+        </div>
+        <div class="nav-links">
+            <div class="server-control">
+                <select id="server-select" class="glass-select">
+                    <option value="" disabled selected>Loading Servers...</option>
+                </select>
+                <button id="add-server-btn" class="glass-btn"><i class="ph ph-plus"></i></button>
+            </div>
+            <a href="#summary" class="btn-primary">Status Check</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">System Defense Protocol</div>
+            <h1>Hardening & Securing<br><span class="gradient-text">Your Operating System</span></h1>
+            <p>Implement these essential steps to significantly enhance your system's security posture and mitigate potential risks effectively.</p>
+            <a href="#guide" class="explore-btn">
+                <span>Explore the Guidelines</span>
+                <i class="ph ph-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-graphics">
+            <!-- Decorative abstract elements -->
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="glass-terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="terminal-body" id="typing-text">
+                    > Securing system perimeter...
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="guide" class="guide-section">
+        <div class="section-header">
+            <h2>Comprehensive Security Checklist</h2>
+            <p>Follow these 11 critical strategies to build an impregnable system environment.</p>
+        </div>
+
+        <div class="roadmap-grid">
+            <!-- Step 1 -->
+            <article class="card reveal" data-task-id="1">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-arrows-clockwise"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">01</div>
+                <h3>Update & Patch Management</h3>
+                <ul>
+                    <li>Regularly update the OS, applications, and firmware with the latest security patches.</li>
+                    <li>Enable automatic updates where possible to ensure timely patching.</li>
+                </ul>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="card reveal" data-task-id="2">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-sliders"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">02</div>
+                <h3>Secure Configuration</h3>
+                <ul>
+                    <li>Disable unnecessary services and features not required for the OS's intended use.</li>
+                    <li>Configure firewall settings to restrict unnecessary network traffic and allow only essential services.</li>
+                </ul>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="card reveal" data-task-id="3">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-user-circle-gear"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">03</div>
+                <h3>User Accounts & Privileges</h3>
+                <ul>
+                    <li>Implement the principle of least privilege (PoLP) for each user account.</li>
+                    <li>Use strong passwords and enforce multi-factor authentication (MFA) for critical accounts.</li>
+                </ul>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="card reveal" data-task-id="4">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-folder-lock"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">04</div>
+                <h3>File System Security</h3>
+                <ul>
+                    <li>Encrypt sensitive data and restrict file permissions based on user roles.</li>
+                    <li>Enable auditing and logging to continuously monitor file access and changes.</li>
+                </ul>
+            </article>
+
+            <!-- Step 5 -->
+            <article class="card reveal" data-task-id="5">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-network"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">05</div>
+                <h3>Network Security</h3>
+                <ul>
+                    <li>Configure secure network settings, disabling unused ports and protocols.</li>
+                    <li>Implement network segmentation to isolate critical assets and services.</li>
+                </ul>
+            </article>
+
+            <!-- Step 6 -->
+            <article class="card reveal" data-task-id="6">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-bug-beetle"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">06</div>
+                <h3>Malware Protection</h3>
+                <ul>
+                    <li>Install robust antivirus software or endpoint protection to detect malware.</li>
+                    <li>Regularly scan the system for vulnerabilities and malware signatures.</li>
+                </ul>
+            </article>
+
+            <!-- Step 7 -->
+            <article class="card reveal" data-task-id="7">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-hard-drives"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">07</div>
+                <h3>Backup & Recovery</h3>
+                <ul>
+                    <li>Establish a backup strategy for critical data and configuration settings.</li>
+                    <li>Test backup integrity and implement a fast disaster recovery plan.</li>
+                </ul>
+            </article>
+
+            <!-- Step 8 -->
+            <article class="card reveal" data-task-id="8">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-activity"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">08</div>
+                <h3>Monitoring & Logging</h3>
+                <ul>
+                    <li>Enable system logging to detect unauthorized access and anomalies.</li>
+                    <li>Use Intrusion Detection/Prevention Systems (IDS/IPS) to monitor traffic.</li>
+                </ul>
+            </article>
+
+            <!-- Step 9 -->
+            <article class="card reveal" data-task-id="9">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-book-open-text"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">09</div>
+                <h3>Security Policies & Procedures</h3>
+                <ul>
+                    <li>Develop security policies for acceptable use, passwords, and incident response.</li>
+                    <li>Educate users proactively about security best practices and threats.</li>
+                </ul>
+            </article>
+
+            <!-- Step 10 -->
+            <article class="card reveal" data-task-id="10">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-magnifying-glass"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">10</div>
+                <h3>Regular Security Audits</h3>
+                <ul>
+                    <li>Conduct vulnerability assessments to identify weaknesses.</li>
+                    <li>Keep abreast of emerging threats and proactive risk mitigation trends.</li>
+                </ul>
+            </article>
+
+            <!-- Step 11 -->
+            <article class="card reveal card-span" data-task-id="11">
+                <div class="card-header-top">
+                    <div class="card-icon"><i class="ph ph-chart-line-up"></i></div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="task-toggle">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="step-num">11</div>
+                <h3>Continual Improvement</h3>
+                <ul>
+                    <li>Stay consistently updated with OS security advisories and industry best practices.</li>
+                    <li>Review and dynamically update security measures to adapt to evolving technology risks.</li>
+                </ul>
+            </article>
+        </div>
+    </main>
+
+    <section id="summary" class="conclusion-section reveal">
+        <div class="glass-panel">
+            <i class="ph ph-check-circle success-icon"></i>
+            <h2>Mission Accomplished</h2>
+            <p>By following these steps, you can significantly enhance the security posture of your operating system and mitigate potential security risks effectively.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SecOS Runbook. All systems secure.</p>
+    </footer>
+
+    <!-- Particles.js for dynamic background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
